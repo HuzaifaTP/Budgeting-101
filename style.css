@@ -38,7 +38,7 @@ header{
     height: 400px;
     align-items: center;
 }
-.header3{
+.list-item{
     border: 2px solid blue;
 }
 .balance_input{

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script defer src="./index.js"></script>
 </head>
 
 <body>
@@ -14,49 +15,53 @@
     <div class="body_container">
 
         <header>BUDGETING 101</header>
-        
+
         <div class="container_1">
 
             <div class="content">
-                <div>Chart 1</div>
-                <div>Chart 2</div>
+                <div id="earning_summary">0</div>
+                <p>Earnings</p>
+                <div id="spending_summary">0 </div>
+                <p>Spendings</p>
             </div>
-            
+
             <div class="content">
 
-                
-                <div class ="balance_input"> 
+
+                <div class="balance_input">
+                    <div id="current_Balance">0</div>
                     <label for="fname">BALANCE</label><br>
-                    <div class = "current_Balance"></div>
                 </div>
 
-                <div class ="balance_input">
-                    <form name = "spending_earning_form">
-                    <label for="fname">INPUT</label><br>
-                    <input type="text" id="fname2" name="fname" value=""><br>
-                    <select name ="transaction_type" class = "transaction_type">
-                        <option value="earnings" name = "earnings">Earnings</option>
-                        <option value="spendings" name = "spendings">Spendings</option>
-
-                    </select>
-                    <button type="submit">Submit</button>
-                </form>
+                <div class="balance_input">
+                    <form id="spending_earning_form" class="spending_earning_form">
+                        <label for="fname">INPUT</label><br>
+                        <input type="text" id="earningsOrSpendings" name="fname" value=""><br>
+                        <select name="transaction_type" class="transaction_type" id="transaction_type" onchange="secondSelector()">
+                            <option value="earnings" id="earnings_select">Earnings</option>
+                            <option value="spendings" id="spendings_select">Spendings</option>
+                        </select>
+                        <select id="spending_type">
+                            
+                        </select> 
+                        <button type="submit">submit</button>
+                    </form>
                 </div>
 
 
-                </div>
+            </div>
 
 
-            
+
             <div class="content">
-                <div class="header3">SPENDING</div>
-               
-            
+                <div class="list-item" id="spendings_list">SPENDING</div>
+
+
             </div>
             <div class="content">
-                <div class="header3">EARNINGS</div>
+                <div class="list-item" id="earnings_list">EARNINGS</div>
 
-            
+
             </div>
 
 
