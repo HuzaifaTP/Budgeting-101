@@ -12,7 +12,6 @@ class Budget101 {
         this.spending_summary = document.getElementById("spending_summary");
         this.earningListView = document.getElementById("earnings_list")
         this.spendingListView = document.getElementById("spendings_list")
-        this.x = document.getElementById("x")
         this.earningList = [];
         this.earningId = 0;
         this.spendingList = [];
@@ -64,7 +63,7 @@ class Budget101 {
                     this.spendingId++
                     this.spendingList.push(spending)
                     this.addSpending(spending)
-                    this.displayBalanceAmount(); 
+                    this.displayBalanceAmount();
 
                     break;
                 default:
@@ -78,7 +77,7 @@ class Budget101 {
         let balance = this.totalEarnings() - this.totalSpendings();
         this.balanceAmount.textContent = balance;
     }
-    
+
     #getDateByTimeStamp(timestamp) {
         let date = new Date(timestamp);
         return date.toDateString();
@@ -114,19 +113,6 @@ class Budget101 {
         this.earningListView.appendChild(div);
 
     }
-
-    // total(arg1,arg2,arg3){
-    //     let total = 0;
-    //         if (arg1.length > 0) {
-    //             total = arg1.reduce(function (totalValue, curentValue) {
-    //                 totalValue += arg3;
-    //                 return totalValue;
-    //             }, 0);
-
-    //         }
-    //         arg2.textContent = total
-    //         return total;
-    // }
 
     //Call back function to merge total??
     totalSpendings() {
@@ -165,7 +151,6 @@ class Budget101 {
         this.displayBalanceAmount();
     }
 
-
     deleteElementFromEarningList(element) {
         let idEarningElement = parseInt(element.dataset.id)
         let parentHoldingId = element.parentElement.parentElement;
@@ -180,10 +165,6 @@ class Budget101 {
 }
 
 
-
-
-
-
 function displayShowValue() {
     console.log("Something");
 }
@@ -192,7 +173,6 @@ function listenToEvents() {
     const spendingEarningForm = document.getElementById("spending_earning_form");
     const spendingList = document.getElementById("spendings_list");
     const earningList = document.getElementById("earnings_list");
-    const userInput = document.getElementById("earningsOrSpendings")
 
     const budget101 = new Budget101();
 
