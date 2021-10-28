@@ -6,19 +6,38 @@ body{
     text-align: center;
     background-color: rgb(125, 112, 112);
     border: 2px solid blue;
+    font-family: "San Francisco", Arial, Helvetica, sans-serif !important;
+
+    background: rgb(62, 159, 159);
+    background: -moz-linear-gradient(
+    135deg,
+    rgb(159, 62, 62) 0%,
+    rgb(255, 119, 119) 100%
+  );
+  background: -webkit-linear-gradient(
+    135deg,
+    rgb(5, 255, 255) 0%,
+    rgb(130, 255, 119) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    rgb(91, 118, 132) 0%,
+    rgb(151, 119, 255) 100%
+  );
 }
 
 .body_container{
     display: flex;
     flex-direction: column;
     width: 80vw;
-    
     background-color: rgb(255, 255, 255);
     border-radius: 1rem;
+    
     
 }
 header{
     font-size: 40px;
+    background-color: lawngreen;
 }
 .container_1{
     display: grid;
@@ -26,27 +45,102 @@ header{
     grid-template-rows: auto auto ;
     justify-content: space-evenly;
     align-items: center;
-    border: 1px solid blue;
     row-gap: 50px;
+    position: relative;
+    flex-wrap: wrap;
+    padding: 30px;
 }
 
 .content{
-    border: 2px solid red;
+    border: 2px solid lawngreen;
     display: flex;
     flex-direction: column;
     width: 400px;
     height: 400px;
     align-items: center;
+    border-radius: 1rem;
+    
+    
 }
-.list-item{
-    border: 2px solid blue;
-}
+
 .balance_input{
     display: flex;
     flex-direction: column;
-   
-    width: 350px;
-    height: 200px;
-    border: 2px solid blue;
-   
+   justify-content: center;
+   align-items: center;
+   width: inherit;
+height: inherit;
+    
 }
+.transaction_card_earnings {
+    margin-top: 0rem;
+    transition: all 0.4s ease;
+    animation-name: show;
+    animation-duration: 0.2s;
+    border-radius: 0.2rem !important;
+    font-size: 20px;
+    display: flex;
+    justify-content:space-between;
+    padding:5px;
+    margin: 5px;
+    flex-wrap: wrap;
+    gap: 80px;
+   
+  }
+
+  .transaction_card_spendings {
+    margin-top: 0rem;
+    border-radius: 0.2rem !important;
+    font-size: 20px;
+    display: flex;
+    justify-content:space-between;
+    border: 0.01px blue;
+    gap: 30px;
+    padding:5px;
+    margin: 5px;
+    flex-wrap: wrap;
+   
+  }
+
+  
+  .spending_earning_form{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+
+  }
+
+  #earning_spending_status{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+
+  }
+  .listSummary{
+      color: rgb(2, 0, 3);
+      font-size: 20px;
+      width: 405px;
+      background-color: lawngreen;
+      position: relative;
+      bottom: 10px;
+      font-weight: bold;
+
+  }
+
+  .earning{
+    margin-top: 5px;
+    
+    border: 1.5px solid lawngreen;
+
+  }
+  .spending{
+      margin-top: 5px;
+      border: 1.5px solid lawngreen;
+  }
+
+  
+  

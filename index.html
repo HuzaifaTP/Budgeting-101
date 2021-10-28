@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script defer src="./index.js"></script>
+    
+<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
 </head>
 
 <body>
@@ -19,32 +21,56 @@
         <div class="container_1">
 
             <div class="content">
-                <div id="earning_summary">0</div>
-                <p>Earnings</p>
-                <div id="spending_summary">0 </div>
-                <p>Spendings</p>
+                <div id = "earning_spending_status">
+                    <div class = arrangement>
+                        
+                            <div id="current_Balance" style="font-size: 100px;">0</div>
+                            <label for="fname">
+                                <p style="font-size: 25px;">
+                                    <i class="fas fa-money-bill-alt" style="color: rgb(0, 0, 0); "></i>
+                                    BALANCE
+                                </p> 
+                            </label>
+                        
+                        
+                <div id="earning_summary" style="font-size: 50px; color: green; font-weight: bold;"> 0 </div>
+                
+                <p style="color: green; font-weight: bold;"><i class="fas fa-dollar-sign"></i>
+                    EARNINGS
+                </p>
+            
+                <div id="spending_summary" style="font-size: 50px; color: red; font-weight: bold;">0 </div>
+                <p style="color: red; font-weight: bold;"><i class="fas fa-arrow-down"></i>
+                    SPENDINGS
+                </p>
+            </div>
+            </div>
             </div>
 
             <div class="content">
 
 
-                <div class="balance_input">
-                    <div id="current_Balance">0</div>
-                    <label for="fname">BALANCE</label><br>
-                </div>
+                
 
                 <div class="balance_input">
                     <form id="spending_earning_form" class="spending_earning_form">
-                        <label for="fname">INPUT</label><br>
-                        <input type="text" id="earningsOrSpendings" name="fname" value=""><br>
-                        <select name="transaction_type" class="transaction_type" id="transaction_type" onchange="secondSelector()">
+                        <label for="fname" style="font-size: 25px;">Please Input An Amount</label><br>
+                        <input type="text" id="earningsOrSpendings" name="fname" value="" style="width: 200px;"><br>
+                        <select name="transaction_type" class="transaction_type" id="transaction_type" onchange="hideSelector(this)" style="font-size: 20px;">
                             <option value="earnings" id="earnings_select">Earnings</option>
-                            <option value="spendings" id="spendings_select">Spendings</option>
+                            <option value="spendings" id="spendings_select" >Spendings</option>
                         </select>
-                        <select id="spending_type">
-                            
-                        </select> 
-                        <button type="submit">submit</button>
+                    <br>
+                        <select id="spending_type" style="font-size: 20px;">
+                            <option value="Food" id="food">Food</option>
+                            <option value="Clothes" id="clothes" >Clothes</option>
+                            <option value="Payments" id="payments" >Payments</option>
+                            <option value="Movie" id="movie" >Movie</option>
+                            <option value="Education" id="education" >Education</option>
+                            <option value="Travel" id="travel" >Travel</option>
+                        </select>
+                        <br>
+                        <button type="submit" style="width: 90px;">SUBMIT</button>
                     </form>
                 </div>
 
@@ -52,14 +78,18 @@
             </div>
 
 
+            <div class="content" id ="x">
+                <div class="list-item" id="spendings_list">
+                    <div class="listSummary">SPENDING</div>
+                </div>
 
-            <div class="content">
-                <div class="list-item" id="spendings_list">SPENDING</div>
 
 
             </div>
             <div class="content">
-                <div class="list-item" id="earnings_list">EARNINGS</div>
+                <div class="list-item" id="earnings_list">
+                    <div class="listSummary"> EARNINGS</div>
+                </div>
 
 
             </div>
