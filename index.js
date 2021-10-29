@@ -35,7 +35,7 @@ class Budget101 {
 
                     let inputEarning = parseInt(userInputValue);
                     this.userInput.value = ""
-
+                  
                     let earning = {
                         id: this.earningId,
                         inputEarning: inputEarning,
@@ -51,7 +51,7 @@ class Budget101 {
 
                     let inputSpending = parseInt(userInputValue)
                     this.userInput.value = ""
-
+                    
                     let spending = {
                         id: this.spendingId,
                         inputSpending: inputSpending,
@@ -140,6 +140,8 @@ class Budget101 {
         this.earning_summary.textContent = totalEarning
         return totalEarning;
     }
+
+    //Can be improved by using Callback function
     deleteElementFromSpendingList(element) {
         let idSpendingElement = parseInt(element.dataset.id)
         let parentHoldingId = element.parentElement.parentElement;
@@ -169,7 +171,7 @@ function displayShowValue() {
     console.log("Something");
 }
 
-function listenToEvents() {
+function listeningToEvents() {
     const spendingEarningForm = document.getElementById("spending_earning_form");
     const spendingList = document.getElementById("spendings_list");
     const earningList = document.getElementById("earnings_list");
@@ -205,5 +207,5 @@ function hideSelector(transactionType) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    listenToEvents();
+    listeningToEvents();
 })
