@@ -84,7 +84,7 @@ height: inherit;
     padding:5px;
     margin: 5px;
     flex-wrap: wrap;
-    gap: 80px;
+    gap: 70px;
    
   }
 
@@ -95,7 +95,7 @@ height: inherit;
     display: flex;
     justify-content:space-between;
     border: 0.01px blue;
-    gap: 30px;
+    gap: 25px;
     padding:5px;
     margin: 5px;
     flex-wrap: wrap;
